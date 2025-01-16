@@ -32,6 +32,8 @@ body {
 .main-container {
   width: 1440px;
   display: grid;
+  justify-content: center;
+  align-items: start;
   grid-template-areas:
     "sidebar header header "
     "sidebar main main"
@@ -46,8 +48,19 @@ body {
 
 .header {
   grid-area: header;
-  background-color: blue;
+  border-bottom: 1px rgb(230, 239, 245) solid;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header__authorization {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 .main {
   grid-area: main;
   background-color: rgb(245, 247, 250);
@@ -125,4 +138,32 @@ body {
   font-weight: 600;
   line-height: 27px;
   margin-bottom: 20px;
+}
+
+.wrapper {
+  border-radius: 25px;
+  background: rgb(255, 255, 255);
+}
+
+.card-info {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  padding: 15px 30px 15px 15px;
+}
+
+.card-list__cards {
+  display: grid;
+  gap: 20px;
+}
+
+.card-statistics__wrapper {
+  padding: 30px 50px;
+}
+
+.add-card__wrapper {
+  padding: 26px 30px 38px 30px;
+}
+
+.card-setting__wrapper {
+  padding: 30px 65px 30px 30px;
 }
