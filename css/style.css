@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
   --text-style: Inter;
 }
@@ -32,12 +32,11 @@ body {
 .main-container {
   width: 1440px;
   display: grid;
-  justify-content: center;
-  align-items: start;
+  grid-template-columns: auto 1fr;
   grid-template-areas:
-    "sidebar header header "
-    "sidebar main main"
-    "sidebar main main ";
+    "sidebar header "
+    "sidebar main "
+    "sidebar main  ";
 }
 
 .sidebar {
@@ -127,10 +126,27 @@ body {
 }
 
 .real-card {
-  border: 1px black solid;
-  border-radius: 100px;
+  border-radius: 25px;
+  background: linear-gradient(
+    135.29deg,
+    rgb(45, 96, 255) 2.413%,
+    rgb(83, 155, 255) 101.106%
+  );
+  font-family: Lato;
 }
 
+.real-card--darker {
+  background: linear-gradient(
+    135.29deg,
+    rgb(76, 73, 237) 2.413%,
+    rgb(10, 6, 244) 101.106%
+  );
+}
+
+.real-card--white {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(223, 234, 242);
+}
 .title {
   color: rgb(51, 59, 105);
   font-family: var(--text-style);
@@ -140,6 +156,20 @@ body {
   margin-bottom: 20px;
 }
 
+.real-card__top {
+  display: flex;
+  /* gap: 202px; */
+  justify-content: space-between;
+  padding: 24px 24px 0 24px;
+  margin-bottom: 30px;
+}
+
+.real-card__mid {
+  display: flex;
+  gap: 66px;
+  padding-left: 24px;
+  margin-bottom: 30px;
+}
 .wrapper {
   border-radius: 25px;
   background: rgb(255, 255, 255);
@@ -166,4 +196,21 @@ body {
 
 .card-setting__wrapper {
   padding: 30px 65px 30px 30px;
+}
+
+.real-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-radius: 0px 0px 25px 25px; */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 20px 24px;
+}
+
+.real-card__bottom--white {
+  border-top: 1px solid rgb(223, 234, 242);
 }
